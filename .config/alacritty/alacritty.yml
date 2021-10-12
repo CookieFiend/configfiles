@@ -1,0 +1,185 @@
+#   ____            _    _      _____ _                _
+#  / ___|___   ___ | | _(_) ___|  ___(_) ___ _ __   __| |
+# | |   / _ \ / _ \| |/ / |/ _ \ |_  | |/ _ \ '_ \ / _` |
+# | |__| (_) | (_) |   <| |  __/  _| | |  __/ | | | (_| |
+#  \____\___/ \___/|_|\_\_|\___|_|   |_|\___|_| |_|\__,_|
+#
+#env:
+  #TERM: alacritty
+window:
+  dimensions:
+    columns: 0
+    lines: 0
+  padding:
+    x: 6
+    y: 6
+  dynamic_padding: false
+  decorations: full
+  startup_mode: Windowed
+  title: Alacritty
+  class:
+    instance: Alacritty
+    general: Alacritty
+scrolling:
+  history: 10000
+  multiplier: 3
+font:
+  normal:
+    family: Source Code Pro
+    style: Regular
+  bold:
+    family: Source Code Pro
+    style: Bold
+  italic:
+    family: Source Code Pro
+    style: Italic
+  bold_italic:
+    family: Source Code Pro
+    style: Bold Italic
+  size: 12.0
+  offset:
+    x: 0
+    y: 1
+draw_bold_text_with_bright_colors: false
+schemes:
+  nord: &nord
+    primary:
+      background: '#2E3440'
+      foreground: '#D8DEE9'
+    normal:
+      black:   '#3B4252'
+      red:     '#BF616A'
+      green:   '#A3BE8C'
+      yellow:  '#EBCB8B'
+      blue:    '#81A1C1'
+      magenta: '#B48EAD'
+      cyan:    '#88C0D0'
+      white:   '#E5E9F0'
+    bright:
+      black:   '#4C566A'
+      red:     '#BF616A'
+      green:   '#A3BE8C'
+      yellow:  '#EBCB8B'
+      blue:    '#81A1C1'
+      magenta: '#B48EAD'
+      cyan:    '#8FBCBB'
+      white:   '#ECEFF4'
+  night_owl: &night_owl
+    primary:
+      background: '#011627'
+      foreground: '#d6deeb'
+    cursor:
+      text: '#011627'
+      cursor: '#d6deeb'
+    selection:
+      background: '#1b90dd'
+    normal:
+      black:   '#011627'
+      red:     '#ef5350'
+      green:   '#22da6e'
+      yellow:  '#c5e478'
+      blue:    '#82aaff'
+      magenta: '#c792ea'
+      cyan:    '#21c7a8'
+      white:   '#ffffff'
+    bright:
+      black:   '#575656'
+      red:     '#ef5350'
+      green:   '#22da6e'
+      yellow:  '#ffeb95'
+      blue:    '#82aaff'
+      magenta: '#c792ea'
+      cyan:    '#7fdbca'
+      white:   '#ffffff'
+  tomorrow_night: &tom_night
+    primary:
+      background: '#1d1f21'
+      foreground: '#c5c8c6'
+    cursor:
+      text: '#1d1f21'
+      cursor: '#ffffff'
+    normal:
+      black:   '#1d1f21'
+      red:     '#cc6666'
+      green:   '#b5bd68'
+      yellow:  '#e6c547'
+      blue:    '#81a2be'
+      magenta: '#b294bb'
+      cyan:    '#70c0ba'
+      white:   '#373b41'
+    bright:
+      black:   '#666666'
+      red:     '#ff3334'
+      green:   '#9ec400'
+      yellow:  '#f0c674'
+      blue:    '#81a2be'
+      magenta: '#b77ee0'
+      cyan:    '#54ced6'
+      white:   '#282a2e'
+  tomorrow_night_bright: &tom_bright
+    primary:
+      background: '#000000'
+      foreground: '#eaeaea'
+    normal:
+      black:   '#000000'
+      red:     '#d54e53'
+      green:   '#b9ca4a'
+      yellow:  '#e6c547'
+      blue:    '#7aa6da'
+      magenta: '#c397d8'
+      cyan:    '#70c0ba'
+      white:   '#424242'
+    bright:
+      black:   '#666666'
+      red:     '#ff3334'
+      green:   '#9ec400'
+      yellow:  '#e7c547'
+      blue:    '#7aa6da'
+      magenta: '#b77ee0'
+      cyan:    '#54ced6'
+      white:   '#2a2a2a'
+  kitty: &kitty
+    primary:
+      background: '#000000'
+      foreground: '#dddddd'
+    normal:
+      black:   '#000000'
+      red:     '#cc0403'
+      green:   '#19cb00'
+      yellow:  '#cecb00'
+      blue:    '#0d73cc'
+      magenta: '#cb1ed1'
+      cyan:    '#0dcdcd'
+      white:   '#dddddd'
+    bright:
+      black:   '#767676'
+      red:     '#f2201f'
+      green:   '#23fd00'
+      yellow:  '#fffd00'
+      blue:    '#1a8fff'
+      magenta: '#fd28ff'
+      cyan:    '#14ffff'
+      white:   '#ffffff'
+colors: *kitty
+background_opacity: 1.0
+cursor:
+  style:
+    shape: Block
+    blinking: On
+  blink_interval: 750
+  unfocused_hollow: true
+  thickness: 0.15
+live_config_reload: true
+key_bindings:
+  - { key: V,              mods: Control|Shift, mode: ~Vi,        action: Paste            }
+  - { key: C,              mods: Control|Shift,                   action: Copy             }
+  - { key: F,              mods: Control|Shift, mode: ~Search,    action: SearchForward    }
+  - { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
+  - { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
+  - { key: Insert,         mods: Shift,                           action: PasteSelection   }
+  - { key: Key0,           mods: Control,                         action: ResetFontSize    }
+  - { key: Equals,         mods: Control,                         action: IncreaseFontSize }
+  - { key: Plus,           mods: Control,                         action: IncreaseFontSize }
+  - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
+  - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
+  - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
