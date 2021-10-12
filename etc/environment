@@ -1,0 +1,9 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+VISUAL=nano
+EDITOR=nano
+LIBVA_DRIVER_NAME=iHD
+GST_VAAPI_ALL_DRIVERS=1
