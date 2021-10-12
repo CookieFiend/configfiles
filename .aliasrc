@@ -1,0 +1,15 @@
+#   ____            _    _      _____ _                _
+#  / ___|___   ___ | | _(_) ___|  ___(_) ___ _ __   __| |
+# | |   / _ \ / _ \| |/ / |/ _ \ |_  | |/ _ \ '_ \ / _` |
+# | |__| (_) | (_) |   <| |  __/  _| | |  __/ | | | (_| |
+#  \____\___/ \___/|_|\_\_|\___|_|   |_|\___|_| |_|\__,_|
+#
+#
+alias ls='exa -al --color=always --group-directories-first'
+alias la='exa -a --color=always --group-directories-first'
+alias ll='exa -l --color=always --group-directories-first'
+alias lt='exa -aT --color=always --group-directories-first'
+alias l.='exa -a | egrep "^\."'
+alias jctl="journalctl -p 3 -xb"
+alias cat='bat'
+alias config='/usr/bin/git --git-dir=/home/cookiefiend/.cfg/ --work-tree=/home/cookiefiend'
