@@ -4,12 +4,18 @@
 # | |__| (_) | (_) |   <| |  __/  _| | |  __/ | | | (_| |
 #  \____\___/ \___/|_|\_\_|\___|_|   |_|\___|_| |_|\__,_|
 #
-#
+# install 'exa' to use below aliases
 alias ls='exa -al --color=always --group-directories-first'
 alias la='exa -a --color=always --group-directories-first'
 alias ll='exa -l --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first'
 alias l.='exa -a | egrep "^\."'
+
+# alias to view journal
 alias jctl="journalctl -p 3 -xb"
+
+# install 'bat' to use the below alias
 alias cat='bat'
+
+# Bare-Git-Repo alias
 alias config='/usr/bin/git --git-dir=/home/cookiefiend/.cfg/ --work-tree=/home/cookiefiend'
